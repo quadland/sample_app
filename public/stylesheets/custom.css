@@ -110,3 +110,8 @@ footer {
 footer nav {
 	float: none;
 }
+
+/* QR Code */
+#my-qrcode table {
+	width: auto;
+}

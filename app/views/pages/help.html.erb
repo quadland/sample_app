@@ -1,6 +1,13 @@
+<%- content_for(:head) do -%>
+<%= javascript_include_tag :defaults -%>
+<%- end -%>
+
+<% @QR_Code = qrcode('http://qr.nerket.com/123456/1234567890123456', 16, 5, 'my-qrcode') %>
+<%= @QR_Code.html_safe %>
+
 <h1>Help</h1>
 <p>
 	This is the help page for the
 	<a href="http://railstutorial.org/help">Ruby on Rails Tutorial Help</a>.
-
+	QR Code: 
 </p>
