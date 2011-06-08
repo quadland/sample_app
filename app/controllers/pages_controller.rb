@@ -9,6 +9,11 @@ class PagesController < ApplicationController
   
   def about
       @title = "About"
+      
+      require 'open-uri'
+      require 'nokogiri'
+      @doc = Nokogiri::HTML(open("http://budget.quadland.com/feed/"))
+      
   end
 
   def help
